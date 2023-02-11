@@ -103,7 +103,7 @@ class _NewStudentPageState extends State<NewStudentPage> {
                       labelText: "Mobile Number",
                     ),
                     controller: _mobileController,
-                    obscureText: true,
+                    // obscureText: true,
                     validator: (value) {
                       if (value!.isEmpty ||
                           value.length != 10 ||
@@ -117,7 +117,7 @@ class _NewStudentPageState extends State<NewStudentPage> {
                     decoration: const InputDecoration(
                       labelText: "Address",
                     ),
-                    obscureText: true,
+                    // obscureText: true,
                     validator: (value) {
                       if (value!.isEmpty) {
                         return "Please enter Address";
