@@ -13,10 +13,11 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
   Widget build(BuildContext context) {
     //get student name here
     final studentname = 'Anjula Perera';
+    final studentAttendance = 4;
     bool feespaid = false;
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(100),
+        preferredSize: const Size.fromHeight(100),
         child: AppBar(
           bottom: PreferredSize(
             preferredSize: const Size.fromHeight(30),
@@ -55,7 +56,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
               height: 50,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
@@ -65,6 +66,23 @@ class _StudentProfilePageState extends State<StudentProfilePage> {
                 CircleAvatar(
                   radius: 20,
                   backgroundColor: feespaid ? Colors.green : Colors.red,
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  'Attendance in ${DateFormat.MMMM().format(DateTime.now())}  : ',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  '$studentAttendance',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 )
               ],
             ),

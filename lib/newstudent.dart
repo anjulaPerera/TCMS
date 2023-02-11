@@ -1,6 +1,7 @@
 // ignore_for_file: unnecessary_null_comparison
 
 import 'package:flutter/material.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 import 'package:tcms/login.dart';
 import 'package:tcms/studentprofile.dart';
 
@@ -23,12 +24,17 @@ class NewStudentPage extends StatefulWidget {
 }
 
 class _NewStudentPageState extends State<NewStudentPage> {
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _mobileController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  String data = '';
+
   final _formKey = GlobalKey<FormState>();
   String _username = '';
   final String _email = '';
-  String _password = '';
+  final String _password = '';
   final String _district = '';
-  String _confirmpassword = '';
+  final String _confirmpassword = '';
   // String districts = '';
 
   @override
@@ -67,6 +73,7 @@ class _NewStudentPageState extends State<NewStudentPage> {
                     decoration: const InputDecoration(
                       labelText: "Name",
                     ),
+                    controller: _nameController,
                     validator: (value) {
                       if (value!.isEmpty) {
                         return "Please enter student's name";
@@ -79,6 +86,7 @@ class _NewStudentPageState extends State<NewStudentPage> {
                     decoration: const InputDecoration(
                       labelText: "Email",
                     ),
+                    controller: _emailController,
                     validator: (value) {
                       if (value == null ||
                           value.isEmpty ||
@@ -94,6 +102,7 @@ class _NewStudentPageState extends State<NewStudentPage> {
                     decoration: const InputDecoration(
                       labelText: "Mobile Number",
                     ),
+                    controller: _mobileController,
                     obscureText: true,
                     validator: (value) {
                       if (value!.isEmpty ||
@@ -139,16 +148,41 @@ class _NewStudentPageState extends State<NewStudentPage> {
                             ),
                           );
                         } else {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const StudentProfilePage(),
-                            ),
-                          );
+                          setState(() {
+                            data = _nameController.text +
+                                _emailController.text +
+                                _mobileController.text;
+                          });
                         }
                       }
                     },
                   ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  Center(
+                    child: QrImage(
+                      data: '$data',
+                      version: QrVersions.auto,
+                      size: 250,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const StudentProfilePage(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        'Go to student profile',
+                        style: TextStyle(color: Colors.white),
+                      ))
                 ],
               ),
             ),

@@ -7,8 +7,6 @@ class GetStarted extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = double.infinity;
-
     return Scaffold(
       backgroundColor: Colors.amber,
       body: Column(
@@ -16,8 +14,9 @@ class GetStarted extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 150, left: 10, right: 10),
             child: Container(
-              width: screenWidth,
-              height: MediaQuery.of(context).size.width * (8 / 11),
+              width: double.infinity,
+              height: 300,
+
               // color: Colors.black,
               decoration: const BoxDecoration(
                   image: DecorationImage(

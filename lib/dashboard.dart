@@ -55,7 +55,7 @@ class _DashboardState extends State<Dashboard> {
                   backgroundColor: Colors.white70,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0)),
-                  minimumSize: Size(MediaQuery.of(context).size.width / 2,
+                  minimumSize: Size(MediaQuery.of(context).size.width / 8,
                       MediaQuery.of(context).size.height / 4),
                 ),
                 child: Column(
@@ -74,7 +74,7 @@ class _DashboardState extends State<Dashboard> {
                   backgroundColor: Colors.white70,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0)),
-                  minimumSize: Size(MediaQuery.of(context).size.width / 2,
+                  minimumSize: Size(MediaQuery.of(context).size.width / 8,
                       MediaQuery.of(context).size.height / 4),
                 ),
                 child: Column(
@@ -98,7 +98,7 @@ class _DashboardState extends State<Dashboard> {
                   backgroundColor: Colors.white70,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0)),
-                  minimumSize: Size(MediaQuery.of(context).size.width / 2,
+                  minimumSize: Size(MediaQuery.of(context).size.width / 8,
                       MediaQuery.of(context).size.height / 4),
                 ),
                 child: Column(
@@ -120,7 +120,7 @@ class _DashboardState extends State<Dashboard> {
                     backgroundColor: Colors.white70,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0)),
-                    minimumSize: Size(MediaQuery.of(context).size.width / 2,
+                    minimumSize: Size(MediaQuery.of(context).size.width / 8,
                         MediaQuery.of(context).size.height / 4),
                   ),
                   child: Column(
@@ -146,7 +146,7 @@ class _DashboardState extends State<Dashboard> {
                     backgroundColor: Colors.white70,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0)),
-                    minimumSize: Size(MediaQuery.of(context).size.width / 2,
+                    minimumSize: Size(MediaQuery.of(context).size.width / 8,
                         MediaQuery.of(context).size.height / 4),
                   ),
                   child: Column(
@@ -167,7 +167,7 @@ class _DashboardState extends State<Dashboard> {
                     backgroundColor: Colors.yellowAccent,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0)),
-                    minimumSize: Size(MediaQuery.of(context).size.width / 2,
+                    minimumSize: Size(MediaQuery.of(context).size.width / 8,
                         MediaQuery.of(context).size.height / 4),
                   ),
                   child: Column(

@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:tcms/getstarted.dart';
-import 'package:tcms/login.dart';
 import 'package:device_preview/device_preview.dart';
-import 'package:tcms/newstudent.dart';
-import 'package:tcms/register.dart';
 
 void main() {
   runApp(DevicePreview(
     enabled: true,
-    builder: (context) => MyApp(),
+    builder: (context) => const MyApp(),
   ));
 }
 
@@ -23,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),
-      home: const NewStudentPage(),
+      home: const GetStarted(),
     );
   }
 }
